@@ -115,11 +115,12 @@ and they later get offered 7,500 Italian lire for the linen, which is more than 
   <img class="left slide-in" src="images/3-2.png" style="width:200px; position:absolute; left:110px; top:4400px; left:500px;">
 	<img class="right slide-in" src="images/5.png" style="width:500px;">
   </div>
-  <div class="p6">
+  <div id="p6">
 	<p>Antonio friend Baiocco tells him to search in another market, Porta Portese, but he and the others cannot join him this time. At Porta Portese, Antonio spots an elderly man and a young man conversing, and he suddenly recognizes one of them—the younger man—as the thief. Antonio and Bruno begin to chase them, and they eventually stumble upon the older man. Antonio approaches the older man about the thief, who pretends to be oblivious and walks away.</p>
   <img Id="sticker" src="images/6-0.png" style="width:1249px; z-index:-1;">
 	<!-- <img class="transparent slide-in" src="images/6.png" style="height:50%; position:relative; top:0; z-index:0;"> -->
   <!-- <video autoplay muted Id="sticker"><source src="images/rain.mp4" type="video/mp4" style="position:absolute; left:510px; top:2500px;"></video> -->
+  <audio id="rain"><source src="audios/heavy-rain-daniel_simon.wav"></audio>
   </div>
   <div class="p7">
 	<p>It’s now late afternoon, and Antonio begins to lose hope, as the chance to retrieve his bike has seemingly slipped away from him. He projects his frustration onto Bruno and slaps him when he begins to question his father. A tearful Bruno asks Antonio, “Why did you hit me?” and Antonio says Bruno deserved the punishment.</p>
@@ -254,6 +255,18 @@ window.onload = function () {
 
     // window.addEventListener('scroll', checkBig);
 
+  document.getElementById('p6').addEventListener(
+    'scroll',
+    function()
+    {
+      if (window.scrollY===5000)
+        {
+            let el = document.getElementById('rain');
+                el.currentTime = 0;
+                el.play();
+        };
+      }
+)
  </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
