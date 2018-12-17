@@ -212,7 +212,7 @@ Deciding to momentarily forget about the bike, the father and son go to a restau
      var scrolled = (scrollYtoImage / height) * 100;
      elmnt.style.width = scrolled + "%";
 
-     console.log("elmntOffsetTop:"+elmnt.offsetTop+"  "+"elmntScrollY:"+scrollYtoImage+"  "+"elmntHigh"+elmnt.height+"  "+"scrolled:"+scrolled)
+//      console.log("elmntOffsetTop:"+elmnt.offsetTop+"  "+"elmntScrollY:"+scrollYtoImage+"  "+"elmntHigh"+elmnt.height+"  "+"scrolled:"+scrolled)
        }
 
     //When the user scrolls the page, execute myFunction 
@@ -255,10 +255,11 @@ window.onload = function () {
 
     // window.addEventListener('scroll', checkBig);
 
-  document.getElementById('p6').addEventListener(
+  document.addEventListener(
     'scroll',
     function()
     {
+	console.log(window.scrollY);
       if (window.scrollY===5000)
         {
             let el = document.getElementById('rain');
