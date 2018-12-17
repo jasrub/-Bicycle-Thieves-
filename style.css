@@ -1,18 +1,298 @@
-body{
-	color: #ffb4c1;
-	background-color: #E4E0D6;
-	background: url("xxxxx.png");
-	background-size: fill;
+ <style>
+	@import url('https://fonts.googleapis.com/css?family=Amiri|Gloria+Hallelujah');
+	@keyframes mymove{
+		from{
+			left:0;
+		}
+		to{
+			left:700px;
+		}
+	}
+
+  @keyframes fadeAndScale {
+    0% {
+        opacity: .3;
+        transform: scale(.9, .9);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    100%{
+        opacity: .3;
+        transform: scale(.9, .9);
+    }
+}
+@keyframes skew {
+  0% {
+    transform: skew(-1.5deg, 1.0deg) rotate(.00001turn); 
+    opacity: 1;
+  }
+  50% {
+    transform: skew(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: skew(-1.5deg, 1.0deg) rotate(.00001turn);
+    opacity: 1;
+  }
+}
+body {
+    
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  
+  label{
+  cursor: pointer;
+  }
+  a:link {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-a{
-	font-family: xxxx;
-	color: #ace001;
+/* visited link */
+a:visited {
+  color: black;
 }
 
-
-p{
-	color:#ace001;
+/* mouse over link */
+a:hover {
+  color: red;
 }
 
+/* selected link */
+a:active {
+  color: black;
+}
+  #menu-toggle {
+  display: none;
+}
+#menu {
+  font-family: 'Gloria Hallelujah', cursive; 
+  font-size: 12;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  width: 180px;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  margin-left: 20px;
+  -webkit-transition: all 0.3s ease;
+  z-index: 2;
+}
+#menu-toggle:checked + #menu {
+  max-height: 100px;
+}
+	.moveItem{
+	position:relative;
+	animation:mymove 2s ease-in;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+  top: 100;
+    }
+    
+    .site-wrap {
+      font-family: 'Amiri', serif;
+      font-size: 16px;
+      padding: 40px;
+      text-align: justify;
+      margin-top: 700px;
+    }
 
+    .left {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .right {
+      float: right;
+      margin-left: 20px;
+    }
+
+    .slide-in {
+      opacity: 0;
+      transition: all 2s;
+    }
+
+    .left.slide-in {
+      transform: translateX(-30%) scale(0.95);
+    }
+    
+    .right.slide-in {
+      transform: translateX(30%) scale(0.95);
+    }
+
+    .slide-in.active {
+      opacity: 1;
+      transform: translateX(0%) scale(1);
+    }
+    .transparent{
+      width:100vw;
+      height:100vh;
+      transform: scaleX(1.5);
+    }
+    .transparent.slide-in.active{
+      opacity: 1;
+      transform: scaleX(1.5);
+    }
+
+    .slide-in.bigger {
+      opacity:1; 
+    }
+
+    .slide-in.bigger.active {
+      transform: scale(3);
+
+    }
+
+    .sticky {
+  position: fixed;
+  top: 0;
+  padding-top: 0px;
+}
+
+.p8{
+  transform-origin: 50% 100%;
+
+   animation-iteration-count: infinite;
+   animation-duration: 8s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+.skew{
+   animation-iteration-count: infinite;
+   animation-duration: 3s;
+    animation-name: skew;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+            }
+
+ </style>
+ <style type="text/css">
+            
+           
+            
+            .menu-btn {
+                display: block;
+                width: 36px;
+                height: 24px;
+                margin-left: 15px;
+                margin-top: 15px;
+                z-index:2;
+            }
+            
+            .menu-btn-block {
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 36px;
+                height: 3px;
+                background-color: #000000;
+                border-radius: 1.5px;
+                transform-origin: 0 50%;
+                transition: transform 0.3s ease;
+            }
+            
+            .menu-btn-block.middle {
+                margin: 9px 0;
+            }
+            .menu-btn-block.bottom {
+                margin-top: 0;
+            }
+            .menu-btn-block.top.active {
+                transform: rotate(42deg);
+            }
+            .menu-btn-block.middle.active {
+                transform: scale(0);
+            }
+            .menu-btn-block.bottom.active {
+                transform: rotate(-42deg);
+            }
+            
+            
+.row{
+  display:flex;
+  width:100%;
+  padding-top: 0;
+  
+}
+.item{
+  width:25vw;
+  height:100vh;
+  text-align: center;
+}
+.chracters{
+  width:25vw;
+  height:100vh;
+
+}
+.front{
+  position:absolute;
+  width:100%;
+  top: 0;
+  margin-top: 0;
+  z-index:0;
+}
+.bg{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  top: 0;
+  margin-top: 0;
+  z-index:-2;
+ 
+}
+
+.all{
+  position: absolute;
+  top:0;
+  margin:0;
+}    
+            
+/* Bounce To Top */
+.hvr-bounce-to-top {
+  color: rgba(0, 0, 0, 0);/*text color*/
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-top:before {
+
+  /*content: "";*/
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .5);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+  color: white;
+}
+.hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}            
+            
+            
+    </style>

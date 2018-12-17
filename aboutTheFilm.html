@@ -1,28 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>About</title>
+	<title>The Bicycle Thieves</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles.css">
-	<style>
-    </style>
+	<link rel="stylesheet" href="style.css">
+  <script src="myscripts.js"></script>
+  <style>@import url('https://fonts.googleapis.com/css?family=Amiri|Gloria+Hallelujah');
+   body{
+background-color: black;
+  	margin: 0;
+  }
+  .menu-btn {
+                display: block;
+                width: 36px;
+                height: 24px;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            
+            .menu-btn-block {
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 36px;
+                height: 3px;
+                background-color: #ffffff;
+                border-radius: 1.5px;
+                transform-origin: 0 50%;
+                transition: transform 0.3s ease;
+            }
+   .btn{
+   	position: absolute;
+   	z-index: 1;
+   }
+   /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw; 
+  height: 100vh;
+  z-index: -1;
+}
+
+.square {
+  position: fixed;
+  vertical-align: middle;
+  
+}
+.content {
+  width: 250px;
+  height:250px;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 33vh;
+}
+p{
+	font-size: 12px;
+}
+.hvr-bounce-to-top {
+  color: rgba(0, 0, 0, 0);/*text color*/
+  
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-top:before {
+
+  content: "";
+  
+  z-index: -1;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, .5);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+  color: white;
+}
+.hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}            
+</style>
+
 </head>
 <body>
-	<h1>The director</h1>
-	<p>xxxxx </p>
-	<img class="xxxx" src="xxxxxxx.jpg">
+   <label for="menu-toggle" >
+    <a class="menu-btn">
+            <div class="menu-btn-block top"></div>
+            <div class="menu-btn-block middle"></div>
+            <div class="menu-btn-block bottom"></div>
+    </a>
+   </label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu">
+  <li><a href="aboutTheFilm.html">about this film</a></li>
+  <li><a href="characters.html">chracters</a></li>
+  <li><a href="bicycleStory.html">story</a></li>
+</ul>
 	
-	<h2>Background</h2>
-	<p>xxxx</p>
-	<img class="xxxx2" src="xxxxxxx.jpg">
+	<!-- <iframe style="position:absolute;
+	margin: 0;
+  top: 50%;
+  left: 60%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+  left:180px;
+  width:80vw;
+  height:80vh;" src="https://player.vimeo.com/video/302101953" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe> -->
+  <video autoplay muted loop id="myVideo">
+  <source src="images/12.mp4" type="video/mp4">
+</video>
 
-    <h3>About me.The web designer</h3>
-	<p>xxxxxx</p>
-	<img class="xxxxx3" src="xxxxxxx.jpg">
 
-	<h4>References and Credits</h4>
-	<p>xxxxxx</p>
-
-	<a href="theURLofTheFilm">Watch the film.</a>
+<div class="square">
+<div class="content">
+<a href="https://vimeo.com/302101953" class="hvr-bounce-to-top">
+  <p>Bicycle Thieves is a 1948 Italian drama film directed by Vittorio De Sica. The film follows the story of a poor father searching post-World War II Rome for his stolen bicycle, without which he will lose the job which was to be the salvation of his young family.</p>
+</a>
+</div></div>
 </body>
+
+
 </html>

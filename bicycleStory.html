@@ -3,14 +3,94 @@
 <head>
 	<title>The Bicycle Thieves</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.css">
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Amiri|Gloria+Hallelujah');
+  body {
+    background-image: url("images/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    max-width: 1249px;
+    overflow-x: hidden;
+    position:absolute;
+    margin: 0;
+  }
+  @keyframes mymove{
+    from{
+      left:0;
+    }
+    to{
+      left:700px;
+    }
+  }
+
+  @keyframes fadeAndScale {
+    0% {
+        opacity: .3;
+        transform: scale(.9, .9);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    100%{
+        opacity: .3;
+        transform: scale(.9, .9);
+    }
+}
+    p{
+      max-width: 900px;
+      margin: 200px auto;
+    }
+
+    div{
+      display:block;
+      margin-top: 300px; /*space between paragraphs*/
+    }
+.menu-btn {
+                display: block;
+                width: 36px;
+                height: 24px;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            
+            .menu-btn-block {
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 36px;
+                height: 3px;
+                background-color: #000000;
+                border-radius: 1.5px;
+                transform-origin: 0 50%;
+                transition: transform 0.3s ease;
+            }
+   .btn{
+    position: absolute;
+    z-index: 1;
+   }
+  </style>
 
 </head>
 <body>
+   <label for="menu-toggle" >
+    <a class="menu-btn">
+            <div class="menu-btn-block top"></div>
+            <div class="menu-btn-block middle"></div>
+            <div class="menu-btn-block bottom"></div>
+    </a>
+   </label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu">
+  <li><a href="aboutTheFilm.html">about this film</a></li>
+  <li><a href="characters.html">chracters</a></li>
+  <li><a href="bicycleStory.html">story</a></li>
+</ul>
 <div class="site-wrap">
   <div class="p1">
 	<p>In post-WII Italy, a large crowd of men gathers around an employment office in Valmelaina. Antonio, a family man, is desperate for work in the lackluster Italian economy. </p>
-	<div class="moveItem" style="border:25px solid #000000; width:400px;">Still working on those items!!</div>
+	<div class="moveItem"><img src="images/manbike.png"></div>
   </div>
   <div class="p2">
 	<p>Unfortunately, Antonio pawned his bike to feed his family and tells the officer that he will retrieve it in a few days. Because the job can easily be offered to another prospective employee, the unsympathetic officer unequivocally tells Antonio, “No bicycle, no job.” The other men begin shouting, declaring they have bicycles and can take Antonio’s job. Desperate, Antonio lies and says he is prepared to report to work as soon as possible with a bike.</p>
@@ -21,21 +101,25 @@
 and they later get offered 7,500 Italian lire for the linen, which is more than enough for Antonio to repossess his bike from the shop. 
 </p>
 	<img class="left slide-in" src="images/3-1.png" style=" width:400px;"><!-- position:absolute; top: 50px; z-index:0; -->
-	<img class="left slide-in" src="images/3-2.png" style="width:200px; position:absolute; left:110px; top:2500px;"><!-- position:absolute; top: 100px z-index:1;  -->
+	<!-- position:absolute; top: 100px z-index:1;  -->
   </div>
   <div class="p4">
 	<p>On Antonio’s first day, his co-worker instructs him on how to properly paste up posters. In this case, it’s a poster of 1940s Hollywood icon Rita Hayworth. </p>
-	<img class="transparent" src="images/4-0.png"style="width:1249px; margin:0px; padding:0px;">
-	<img class="left slide-in" src="images/4-1.png" style="width:400px;">
+	<!-- <img class="transparent" src="images/4-0.png"style="position:absolute; width:100%vw; margin:0px; padding:0px; z-index:-2;"> -->
+  <video autoplay muted class="posters"><source src="images/posters.mp4" type="video/mp4" style="position:absolute; left:410px; top:2500px; z-index:0;"></video>
+	<img class="right slide-in" src="images/4-1.png" style="width:700px; position:absolute; left:700px; top:3350px;">
   </div>
-	<p>Later Antonio becomes so engrossed in his work, he fails to pay careful attention to his bike, and a young man jumps on Antonio’s bike and quickly rides off with it. </p>
+	<p style="font-family: 'Gloria Hallelujah', cursive; font-size: 24;">Later Antonio becomes so engrossed in his work, he fails to pay careful attention to his bike, and a young man jumps on Antonio’s bike and quickly rides off with it. </p>
   <div class="p5">
 	<p>In an attempt to chase after the man, Antonio latches himself onto a moving automobile, but he loses the thief in the tunnels. Devastated, Antonio reports the stolen bike to the unsympathetic and useless police, who have Antonio file a complaint. The officer tells Antonio to search for the bike himself, to which Antonio replies, “Look all over Rome? What's the point of even filling out a complaint?" Because Antonio filed a complaint and the police received the bike’s serial number, the officer claims that they will be able to proceed with the investigation if the bike shows up, but there is not much more he or Antonio can do in the meantime.</p>
+  <img class="left slide-in" src="images/3-2.png" style="width:200px; position:absolute; left:110px; top:4400px; left:500px;">
 	<img class="right slide-in" src="images/5.png" style="width:500px;">
   </div>
   <div class="p6">
 	<p>Antonio friend Baiocco tells him to search in another market, Porta Portese, but he and the others cannot join him this time. At Porta Portese, Antonio spots an elderly man and a young man conversing, and he suddenly recognizes one of them—the younger man—as the thief. Antonio and Bruno begin to chase them, and they eventually stumble upon the older man. Antonio approaches the older man about the thief, who pretends to be oblivious and walks away.</p>
-	<img class="transparent slide-in" src="images/6.png" style="width:1249px;">
+  <img Id="sticker" src="images/6-0.png" style="width:1249px; z-index:-1;">
+	<!-- <img class="transparent slide-in" src="images/6.png" style="height:50%; position:relative; top:0; z-index:0;"> -->
+  <!-- <video autoplay muted Id="sticker"><source src="images/rain.mp4" type="video/mp4" style="position:absolute; left:510px; top:2500px;"></video> -->
   </div>
   <div class="p7">
 	<p>It’s now late afternoon, and Antonio begins to lose hope, as the chance to retrieve his bike has seemingly slipped away from him. He projects his frustration onto Bruno and slaps him when he begins to question his father. A tearful Bruno asks Antonio, “Why did you hit me?” and Antonio says Bruno deserved the punishment.</p>
@@ -46,33 +130,39 @@ and they later get offered 7,500 Italian lire for the linen, which is more than 
 	<p>Antonio and Bruno separate to look for the old man. Near a lake, Antonio spots a crowd shouting about a drowning child. Not knowing the whereabouts of Bruno, Antonio begins to panic, but Bruno is thankfully safe and sound, and Antonio realizes how important his son is to him.
 Deciding to momentarily forget about the bike, the father and son go to a restaurant. Antonio justifies this irresponsible decision, saying, “why kill myself worrying when I’ll end up just as dead anyway?” The restaurant is filled with bourgeois families, which reminds Antonio and Bruno of their lower socioeconomic status. By the end of the meal, Antonio begins to think sensibly and realizes he must find his bike if he wants to provide for his family.
 </p>
-	<img class="moveItem3" src="xxxxxxx.jpg" alt="scene3">
   </div>
-  <div class="p9">
-	<p>Antonio and Bruno then stumble upon the young thief immediately after their visit with the seer. Antonio chases him into a brothel and drags him out into the street. The young man denies the accusations, and the neighbors in the street form a hostile crowd and tell Antonio he can’t accuse anyone of a crime without evidence or witnesses.  </p>
+  <div >
+	<p class="skew">Antonio and Bruno then stumble upon the young thief immediately after their visit with the seer. Antonio chases him into a brothel and drags him out into the street. The young man denies the accusations, and the neighbors in the street form a hostile crowd and tell Antonio he can’t accuse anyone of a crime without evidence or witnesses.  </p>
   </div>
 
-    <p style="font-family: 'Gloria Hallelujah', cursive;">Antonio leaves the area in despair, and the crowd keeps shouting at him.</p>
+    <p style="font-family: 'Gloria Hallelujah', cursive; font-size: 24;">Antonio leaves the area in despair, and the crowd keeps shouting at him.</p>
   <div class="p10">
 	<p>Antonio and Bruno sit on a curb outside of a packed football stadium. Hundreds of bicycles surround the duo, and Antonio spots an unattended one in the distance. Conflicted, he paces back and forth and gives Bruno some money to take a streetcar home.</p>
-	<img src="images/8-1.png"style="align:center; width:500px;">
-	<img class="addLight" src="images/8-2.png" style="align:center; width:500px;">
+	<img src="images/8-1.png"style="position:absolute; left:324px; align:center; width:600px;">
+	<img class="slide-in" src="images/8-2.png" style="position:absolute; left:324px; align:center; width:600px;">
   </div>
 
 	<p>He then approaches the unguarded bicycle and jumps on it. </p>
 
   <div class="p11">
 	<p>The outcry over his attempted theft is immediate, and Bruno—who missed the streetcar—watches his father forced off the bike by a group of men. Bruno runs into the angry crowd, weeping, “Papa! Papa!” The men begin to muscle Antonio toward the police station.</p>
-	<img Id="bigger" src="images/9.png" style=" width:500px;">
+	<img Id="bigger" class="slide-in bigger" src="images/9.png" style=" width:500px;">
   </div>
-  <div class="p12">
+  <div class="p12" style="position: static;">
 	<p>The owner of the bicycle notices Bruno, and compassionately decides to not press charges against Antonio. Antonio and Bruno walk amid a crowd, and Antonio holds his head in shame, trying not to cry. Bruno tearfully grasps his father’s hand, and they continue walking home.</p>
-	<img class="smaller" src="images/10-1.png" style=" width:700px;">
-	<img src="images/10-0.png" style=" width:700px;">
+	<img class="smaller" src="images/10-1.png" style="position:absolute; width:110vw; z-index:-1;">
+	<img src="images/10-0.png" style="position:absolute; width:110vw; z-index:-2;">
   </div>
 </div>
-
- <script>
+<script>
+ function menu() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
@@ -108,36 +198,48 @@ Deciding to momentarily forget about the bike, the father and son go to a restau
 
     window.addEventListener('scroll', debounce(checkSlide));
 
-    // const biggerImages = document.querySelectorAll('.bigger');
 
-    // function checkBig() {
-    //   biggerImages.forEach(function(biggerImage) {
-    //     // 
-    //     const startGrow = (window.scrollY + window.innerHeight/2) + biggerImage.height / 2;
-    //     // bottom of the image
-    //     const imageBottom = biggerImage.offsetTop + biggerImage.height;
-    //     const isHalfShown = startGrow > biggerImage.offsetTop;
-    //     const isNotScrolledPast = window.scrollY < imageBottom;
-    //     if (isHalfShown && isNotScrolledPast) {
-    //       biggerImage.classList.add('active');
-    //     } else {
-    //       biggerImage.classList.remove('active');
-    //     }
-    //   });
-    // }
 
-    // window.addEventListener('scroll', checkBig);
-    window.onscroll = function() {myFunction()};
+  window.addEventListener('scroll', myFunction);
+//window.onscroll = function() {myFunction()};
 
     function myFunction() {
      var elmnt = document.getElementById("bigger");
-     var scrollYtoImage = elmnt.scrollTop-window.scrollY;
+     var scrollYtoImage = elmnt.offsetTop-window.scrollY;
 
-     var height = elmnt.height;
+     var height = 500;
      var scrolled = (scrollYtoImage / height) * 100;
      elmnt.style.width = scrolled + "%";
-     
+
+     console.log("elmntOffsetTop:"+elmnt.offsetTop+"  "+"elmntScrollY:"+scrollYtoImage+"  "+"elmntHigh"+elmnt.height+"  "+"scrolled:"+scrolled)
        }
+
+    //When the user scrolls the page, execute myFunction 
+
+var sticky;
+window.onload = function () {
+  console.log('loaded')
+
+  window.addEventListener('scroll', myFunction2);
+
+  // Get the sticker
+  var sticker = document.getElementById("sticker");
+
+  sticky = sticker.offsetTop;
+  console.log(sticky);
+ 
+  // Add the sticky class to the sticker when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+}
+  function myFunction2() {
+    if (window.pageYOffset > sticky && window.pageYOffset < sticky+500) {
+      sticker.classList.add("sticky");
+    } else {
+      sticker.classList.remove("sticky");
+    }
+  }
+
+    
     // const biggerImages = document.querySelectorAll('.bigger');
     // function checkBig() {
     //   biggerImages.forEach(function(biggerImage) {
@@ -153,79 +255,23 @@ Deciding to momentarily forget about the bike, the father and son go to a restau
     // window.addEventListener('scroll', checkBig);
 
  </script>
- <style>
-	@import url('https://fonts.googleapis.com/css?family=Amiri|Gloria+Hallelujah');
-	@keyframes mymove{
-		from{
-			left:0;
-		}
-		to{
-			left:200px;
-		}
-	}
-	.moveItem{
-	position:relative;
-	animation:mymove 1s ease-in;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-    }
-    
-    .site-wrap {
-      font-family: 'Amiri', serif;
-      font-size: 16px;
-      
-      
-      background: white;
-      padding: 40px;
-      text-align: justify;
-    }
-    p{
-    	max-width: 900px;
-    	margin: 200px auto;
-    }
-
-    div{
-      display:block;
-      margin-top: 300px; /*space between paragraphs*/
-    }
-
-    .left {
-      float: left;
-      margin-right: 20px;
-    }
-
-    .right {
-      float: right;
-      margin-left: 20px;
-    }
-
-    .slide-in {
-      opacity: 0;
-      transition: all 2s;
-    }
-
-    .left.slide-in {
-      transform: translateX(-30%) scale(0.95);
-    }
-    
-    .right.slide-in {
-      transform: translateX(30%) scale(0.95);
-    }
-
-    .slide-in.active {
-      opacity: 1;
-      transform: translateX(0%) scale(1);
-    }
-    .transparent{
-      width:100vw;
-      height:100vh;
-      transform: scaleX(1.5);
-    }
-    .transparent.slide-in.active{
-      opacity: 1;
-      transform: scaleX(1.5);
-    }
-
- </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+            
+            (function() {
+                
+                var menuBtn = $('a.menu-btn'),
+                    menuBtnBlock = menuBtn.find('div.menu-btn-block');
+                
+                menuBtn.on('click', function() {
+                    menuBtnBlock.toggleClass('active');
+                });
+                
+                
+                
+            })();
+            
+    </script>
 </body>
+
 </html>

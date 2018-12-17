@@ -1,28 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Characters Intro.</title>
+	<title>The Bicycle Thieves</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles.css">
-	<style>
-	
-    </style>
+	<link rel="stylesheet" href="style.css">
+  <script src="myscripts.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Amiri|Gloria+Hallelujah');
+  body{
+  	position:absolute;
+  	margin: 0;
+  }
+  .menu-btn {
+                display: block;
+                width: 36px;
+                height: 24px;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            
+            .menu-btn-block {
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 36px;
+                height: 3px;
+                background-color: #000000;
+                border-radius: 1.5px;
+                transform-origin: 0 50%;
+                transition: transform 0.3s ease;
+            }
+   .btn{
+   	position: absolute;
+   	z-index: 1;
+   }
+   p, h1{
+   	padding: 50px 25px;
+   }
+   h1{
+   	margin-top: 40px;
+   }
+  </style>
+
 </head>
 <body>
+<div class="btn">
+   <label for="menu-toggle" >
+    <a class="menu-btn">
+            <div class="menu-btn-block top"></div>
+            <div class="menu-btn-block middle"></div>
+            <div class="menu-btn-block bottom"></div>
+    </a>
+   </label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu">
+  <li><a href="aboutTheFilm.html">about this film</a></li>
+  <li><a href="characters.html">chracters</a></li>
+  <li><a href="bicycleStory.html">story</a></li>
+</ul>
+</div>
+<div class="all">
+<div class="front">
+<div class="row">
+  <a class="hvr-bounce-to-top">
+  	<div class="item">
 	<h1>The Father</h1>
-	<p>xxxxxxxx. </p>
-	<img class="xxx" src="xxxxxxx.jpg" alt="fatherIntro">
+	<p>Antonio Ricci
+	At the beginning of the film, it is easy to sympathize with Antonio—he wants to provide for his family in economically suffering post-war Italy. However, when his bike gets stolen, Antonio undergoes a stark change in character. </p>
+  </div>
+</a>
+<a class="hvr-bounce-to-top">
+  <div class="item">
+	<h1>The Son</h1>
+	<p>Bruno Ricci
+	Bruno is one of Antonio and Maria’s children. Impoverishment has deprived Bruno of his innocence and the chance at a blissful, carefree childhood. Despite his young age, he works at a gas station to support his poverty-stricken family.  </p>
+  </div>
+  </a>
+<a class="hvr-bounce-to-top">
+  <div class="item">
+	<h1>The Mother</h1>
+	<p>Maria Ricci
+	As Antonio’s wife, Maria is a reasonable, pragmatic presence throughout her small role in the film. While Antonio does not have a bike when he receives a job offer, Maria does not succumb to the seeming hopelessness of her husband’s predicament. Instead, she acts rationally and sells their sheets to repossess the bicycle, thereby illustrating her utmost commitment to her family. </p>
+  </div>
+  </a>
+<a  class="hvr-bounce-to-top">
+  <div class="item">
+	<h1>The Thief</h1>
+	<p>While initially appearing to be an immoral, petty criminal, the film later humanizes the young thief. He is sickly and experiences a seizure (some audiences believe that he feigns the fit, but this impression speaks to an overly cynical perspective on the film). The thief also is revealed to live in even worse conditions than Antonio’s family, and he functions to enhance Bicycle Thieves’ major theme: the line between victim and criminal becomes progressively blurred in the face of economic despair.</p>
+  </div>
+  </a>
+</div>
+</div>
+<div class="bg">
+<div class="row">
+	<img class="chracters" src="images/c-03.png">
 	
-	<h2>The Son</h2>
-	<p>xxxxxxxx. </p>
-	<img class="xxx2" src="xxxxxxx.jpg" alt="sonIntro">
+	<img class="chracters" src="images/c-04.png">
 
-	<h3>The Mother</h3>
-	<p>xxxxxxxx. </p>
-	<img class="xxx3" src="xxxxxxx.jpg" alt="C3Intro">
+    <img class="chracters" src="images/c-01.png">
 
-	<h4>The X</h4>
-	<p>xxxxxxxx. </p>
-	<img class="xxx3" src="xxxxxxx.jpg" alt="C3Intro">
+	<img class="chracters" src="images/c-02.png">
+</div>
+</div>
+</div>
 </body>
 </html>
